@@ -39,8 +39,8 @@ def struct_log(fn):
                 elif "http" in arg:
                     options["url"] = arg
 
-        service_name = re.search('http.*ru', options.get("url")).group()
-        handler = re.search('ru.*', options.get("url"))
+        service_name = re.search('http.*', options.get("url")).group()
+        handler = re.search('.*', options.get("url"))
         handler = handler.group()[2::] if handler else ''
 
         """
